@@ -1,0 +1,23 @@
+﻿Get-ConnectorUsageReport started 2026-11-17 13:19:39Z
+2026-11-17 13:19:42 [INFO] pac profile: admin@contoso.onmicrosoft.com, tenant 450b4f9f-b97a-3d50-6023-fe66ae7a7365
+2026-11-17 13:19:42 [INFO] Proposed change: shared_office365users -> NonBusiness in every applicable policy
+2026-11-17 13:19:42 [INFO] Proposed change: shared_powerappsforadmins -> Business in every applicable policy
+2026-11-17 13:19:44 [INFO] Environments: page 1, 17 of 17 records
+2026-11-17 13:19:44 [INFO] Environments in scope: 17 of 17
+2026-11-17 13:19:47 [INFO] Connector catalogue: page 1, 250 of 1866 records
+2026-11-17 13:19:49 [INFO] Connector catalogue: page 2, 500 of 1866 records
+2026-11-17 13:19:52 [INFO] Connector catalogue: page 3, 750 of 1866 records
+2026-11-17 13:19:54 [INFO] Connector catalogue: page 4, 1000 of 1866 records
+2026-11-17 13:19:56 [INFO] Connector catalogue: page 5, 1250 of 1866 records
+2026-11-17 13:19:58 [INFO] Connector catalogue: page 6, 1500 of 1866 records
+2026-11-17 13:20:01 [INFO] Connector catalogue: page 7, 1750 of 1866 records
+2026-11-17 13:20:03 [INFO] Connector catalogue: page 8, 1866 of 1866 records
+2026-11-17 13:20:06 [INFO] Apps, flows and agents: page 1, 250 of 609 records
+2026-11-17 13:20:09 [INFO] Apps, flows and agents: page 2, 500 of 609 records
+2026-11-17 13:20:11 [INFO] Apps, flows and agents: page 3, 609 of 609 records
+2026-11-17 13:20:11 [INFO] Resources read: 609
+2026-11-17 13:20:11 [INFO] Reading data policies from file .\sample-dlp-policies.json
+2026-11-17 13:20:11 [INFO] Data policies read: 2
+2026-11-17 13:20:11 [INFO] Owner names are not resolved (no admin module session). Owner shows the Entra object id.
+2026-11-17 13:20:12 [WARN] 1 resource(s) belong to an environment the inventory does not list (for example a deleted environment) and are not in the report.
+2026-11-17 13:20:12 [INFO] Finished in 33s. Files: 15

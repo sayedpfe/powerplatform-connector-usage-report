@@ -1,0 +1,21 @@
+flowchart LR
+  subgraph Tenant["Power Platform tenant (read-only)"]
+    INV["Inventory API<br/>apps, flows, agents,<br/>connector catalogue"]
+    DLP["Data policies<br/>groups, action rules"]
+  end
+  subgraph Script["Get-ConnectorUsageReport.ps1"]
+    READ["Read + page + retry"]
+    EVAL["DLP evaluation<br/>ConnectorUsageReport.Dlp.psm1"]
+    WHATIF["-ProposedChange<br/>before vs after"]
+  end
+  subgraph Out["Report folder"]
+    CSV["CSV per environment<br/>Summary.csv"]
+    IMP["Impact.csv<br/>WouldBreak"]
+    HTML["Summary.html"]
+  end
+  INV -- "pac resource-query (delegated)" --> READ
+  DLP -- "Get-DlpPolicy or JSON file" --> READ
+  READ --> EVAL --> CSV
+  EVAL --> WHATIF --> IMP
+  EVAL --> HTML
+  TEST["Pester 40/40<br/>fake data"] -. "tests" .-> EVAL

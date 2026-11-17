@@ -1,0 +1,212 @@
+{
+  "value": [
+    {
+      "name": "11111111-1111-4111-8111-111111111111",
+      "displayName": "Contoso baseline (all environments)",
+      "defaultConnectorsClassification": "General",
+      "connectorGroups": [
+        {
+          "classification": "Confidential",
+          "connectors": [
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+              "name": "shared_sharepointonline",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_office365",
+              "name": "shared_office365",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_office365users",
+              "name": "shared_office365users",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_teams",
+              "name": "shared_teams",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "name": "shared_commondataserviceforapps",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness",
+              "name": "shared_onedriveforbusiness",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_office365groups",
+              "name": "shared_office365groups",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_planner",
+              "name": "shared_planner",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness",
+              "name": "shared_excelonlinebusiness",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_approvals",
+              "name": "shared_approvals",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness",
+              "name": "shared_wordonlinebusiness",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_sql",
+              "name": "shared_sql",
+              "type": "Microsoft.PowerApps/apis"
+            }
+          ]
+        },
+        {
+          "classification": "General",
+          "connectors": {
+            "id": "/providers/Microsoft.PowerApps/apis/shared_msnweather",
+            "name": "shared_msnweather",
+            "type": "Microsoft.PowerApps/apis"
+          }
+        },
+        {
+          "classification": "Blocked",
+          "connectors": [
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_twitter",
+              "name": "shared_twitter",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_rss",
+              "name": "shared_rss",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_dropbox",
+              "name": "shared_dropbox",
+              "type": "Microsoft.PowerApps/apis"
+            }
+          ]
+        }
+      ],
+      "environmentType": "AllEnvironments",
+      "environments": [],
+      "connectorConfigurations": {
+        "connectorActionConfigurations": [
+          {
+            "connectorId": "/providers/Microsoft.PowerApps/apis/shared_msnweather",
+            "actionRules": [
+              {
+                "actionId": "TodaysForecast",
+                "behavior": "Block"
+              }
+            ],
+            "defaultConnectorActionRuleBehavior": "Allow"
+          }
+        ],
+        "endpointConfigurations": [
+          {
+            "connectorId": "/providers/Microsoft.PowerApps/apis/shared_sql",
+            "endpointRules": [
+              {
+                "order": 1,
+                "endpoint": "*.database.windows.net*",
+                "behavior": "Allow"
+              },
+              {
+                "order": 2,
+                "endpoint": "*",
+                "behavior": "Deny"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "22222222-2222-4222-8222-222222222222",
+      "displayName": "Contoso Prod restricted",
+      "defaultConnectorsClassification": "General",
+      "connectorGroups": [
+        {
+          "classification": "Confidential",
+          "connectors": [
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+              "name": "shared_sharepointonline",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_office365",
+              "name": "shared_office365",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_office365users",
+              "name": "shared_office365users",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_teams",
+              "name": "shared_teams",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "name": "shared_commondataserviceforapps",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_planner",
+              "name": "shared_planner",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_approvals",
+              "name": "shared_approvals",
+              "type": "Microsoft.PowerApps/apis"
+            }
+          ]
+        },
+        {
+          "classification": "General",
+          "connectors": []
+        },
+        {
+          "classification": "Blocked",
+          "connectors": [
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_visualstudioteamservices",
+              "name": "shared_visualstudioteamservices",
+              "type": "Microsoft.PowerApps/apis"
+            },
+            {
+              "id": "/providers/Microsoft.PowerApps/apis/shared_webcontents",
+              "name": "shared_webcontents",
+              "type": "Microsoft.PowerApps/apis"
+            }
+          ]
+        }
+      ],
+      "environmentType": "OnlyEnvironments",
+      "environments": [
+        {
+          "id": "/providers/Microsoft.BusinessAppPlatform/scopes/admin/environments/7085abb8-1ed6-d3f5-891e-4ad837c9feb9",
+          "name": "7085abb8-1ed6-d3f5-891e-4ad837c9feb9",
+          "type": "Microsoft.BusinessAppPlatform/scopes/environments"
+        }
+      ],
+      "connectorConfigurations": null
+    }
+  ]
+}

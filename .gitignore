@@ -1,0 +1,4 @@
+ConnectorUsageReport-*/
+*.log
+!samples/**/run.log
+
